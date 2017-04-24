@@ -106,14 +106,14 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2" >
+        <li class="chapter " data-level="1.2" data-path="overview.html">
             
-                <span>
+                <a href="overview.html">
             
                     
                     DevOps
             
-                </span>
+                </a>
             
 
             
@@ -224,16 +224,20 @@
                                 
                                 <h1 id="continuous-delivery-entrega-cont&#xED;nua">Continuous delivery (Entrega cont&#xED;nua)</h1>
 <p>Com o processo de desenvolvimento mais &#xE1;gil, &#xE9; poss&#xED;vel entregar melhorias ao usu&#xE1;rio final, e responder a demandas de mercado muito mais r&#xE1;pido.</p>
-<p>O cen&#xE1;rio ideal seria apertar um bot&#xE3;o e entregar seu c&#xF3;digo onde quiser (Ambiente de homologa&#xE7;&#xE3;o, teste ou produ&#xE7;&#xE3;o).</p>
-<p>A entrega cont&#xED;nua deve come&#xE7;ar pela implanta&#xE7;&#xE3;o (deploy) do software em um ambiente de teste que espelhe a produ&#xE7;&#xE3;o.</p>
-<p>O desenvolvedor ap&#xF3;s desenvolver uma nova funcionalidade ou produto dever&#xE1; subir esse novo c&#xF3;digo para o ambiente de testes. Dever&#xE1; ent&#xE3;o ser executados os testes de aceita&#xE7;&#xE3;o automatizados ou testes de regress&#xE3;o para garantir que nenhuma nova mudan&#xE7;a de c&#xF3;digo quebrou as funcionalidades existentes. Casos os estes teste falhem o processo deve parar. O desenvolvedor deve ser notificado automaticamente. Caso os testes de aceita&#xE7;&#xE3;o passem, todos os testes n&#xE3;o-funcionais automatizados devem ser executados.</p>
+<p>O cen&#xE1;rio ideal seria apertar um bot&#xE3;o e entregar uma atualiza&#xE7;&#xE3;o do seu c&#xF3;digo para algum ambiente, seja de homologa&#xE7;&#xE3;o, teste ou produ&#xE7;&#xE3;o.</p>
+<p>A entrega cont&#xED;nua deve come&#xE7;ar pela implanta&#xE7;&#xE3;o (deploy) do software em um ambiente de teste que espelhe o de produ&#xE7;&#xE3;o.</p>
+<p>O desenvolvedor ap&#xF3;s desenvolver uma nova funcionalidade ou produto dever&#xE1; subir esse novo c&#xF3;digo para o ambiente de testes. Dever&#xE1; ent&#xE3;o ser executados os testes de aceita&#xE7;&#xE3;o automatizados, ou testes de regress&#xE3;o, para garantir que nenhuma nova mudan&#xE7;a de c&#xF3;digo quebrou as funcionalidades existentes. Casos os estes teste falhem o processo deve parar. O desenvolvedor deve ser notificado automaticamente. Caso os testes de aceita&#xE7;&#xE3;o passem, todos os testes n&#xE3;o-funcionais automatizados devem ser executados.</p>
 <p>Testes de Carga e de seguran&#xE7;a pode sem executados nessa etapa tamb&#xE9;m.</p>
-<p>Caso a bateria de testes n&#xE3;o detecte nenhum problema, o novo c&#xF3;digo estar&#xE1; pronto para ser incoporado ao ambiente de produ&#xE7;&#xE3;o.</p>
+<p>Caso a bateria de testes n&#xE3;o detecte nenhum problema, o novo c&#xF3;digo estar&#xE1; pronto para ser incorporado ao ambiente de produ&#xE7;&#xE3;o.</p>
 <h2 id="m&#xE9;todos-de-implanta&#xE7;&#xE3;o-deploy">M&#xE9;todos de implanta&#xE7;&#xE3;o (deploy)</h2>
-<h3 id="entrega-azul--verde">Entrega azul / verde</h3>
-<p>As cores Azul e Verde s&#xE3;o apenas marcadores de posi&#xE7;&#xE3;o para representar um grupo de servidores. A estrat&#xE9;gia azul/verde ajuda a subir uma nova atualiza&#xE7;&#xE3;o, minimizando o tempo de inatividade. Voc&#xEA; tem dois ambientes, chamados verde e azul. E voc&#xEA; tem um roteador para escolher qual est&#xE1; online.</p>
+<h3 id="implanta&#xE7;&#xE3;o-azulverde-bluegreen-deployment">Implanta&#xE7;&#xE3;o azul/verde (blue/green deployment)</h3>
+<p><code>blue/green deployment</code> &#xE9; uma estrat&#xE9;gia em implanta&#xE7;&#xE3;o de software que conta com duas configura&#xE7;&#xF5;es id&#xEA;nticas de ambiente em produ&#xE7;&#xE3;o, que ficam alternando entre ativa e inativa. Um ambiente &#xE9; chamado de blue, e o outro ambiente que &#xE9; id&#xEA;ntico &#xE9; chamado de green.</p>
+<p>As cores Azul e Verde s&#xE3;o apenas marcadores de posi&#xE7;&#xE3;o para representar um grupo de servidores.</p>
+<p>Os dois ambientes, azul e verde, podem lidar com toda a carga de produ&#xE7;&#xE3;o, e s&#xE3;o usados de forma alternada e n&#xE3;o como um espa&#xE7;o prim&#xE1;rio e secund&#xE1;rio. Enquanto um ambiente fica ativo, o outro fica ocioso. Quando uma nova vers&#xE3;o de software est&#xE1; pronta, a equipe implementa essa nova vers&#xE3;o no ambiente ocioso, onde &#xE9; testada. Uma vez que a nova vers&#xE3;o tenha sido examinada, a equipe ir&#xE1; ativar o ambiente ocioso, geralmente ajustando uma configura&#xE7;&#xE3;o de roteador para redirecionar o tr&#xE1;fego. Deixando o ambiente que estava ativo, dessa vez ocioso.</p>
+<p>Portanto, a estrat&#xE9;gia <code>azul/verde</code> ajuda a subir uma nova atualiza&#xE7;&#xE3;o, minimizando o tempo de inatividade.</p>
+<p><img src="../assets/images/bluegreen.jpg" alt="bluegreen"></p>
 <h3 id="servidor-can&#xE1;rio">Servidor Can&#xE1;rio</h3>
-<p>Um Servidor Can&#xE1;rio funciona como um can&#xE1;rio das minas de Carv&#xE3;o, &#xE9; um servidor onde colocamos uma certa porcentagem do trafego apenas para verificar seu comportamento e verificar se o novo release sobrevive.</p>
+<p>Um Servidor Can&#xE1;rio funciona como um can&#xE1;rio das minas de carv&#xE3;o, &#xE9; um servidor onde colocamos uma certa porcentagem do tr&#xE1;fego apenas para verificar seu comportamento, e verificar se o novo release sobrevive.</p>
 <p>Ferramentas para ajudar neste processo:</p>
 <ul>
 <li><a href="https://www.ansible.com/" target="_blank">Ansible</a></li>
@@ -273,7 +277,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Entrega contínua","level":"1.2.2","depth":2,"next":{"title":"Integração contínua","level":"1.2.3","depth":2,"path":"content/integracao-continua.md","ref":"content/integracao-continua.md","articles":[]},"previous":{"title":"Geral","level":"1.2.1","depth":2,"path":"content/overview.md","ref":"content/overview.md","articles":[]},"dir":"ltr"},"config":{"plugins":["theme-api","prism","-highlight","hints","expandable-chapters"],"styles":{"website":"./assets/main.css"},"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-tomorrow.css"]},"search":{},"hints":{"danger":"fa fa-exclamation-circle","info":"fa fa-info-circle","tip":"fa fa-mortar-board","working":"fa fa-wrench"},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-api":{"languages":[],"split":true,"theme":"dark"},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{}},"theme":"default","author":"Gabriel Godoy","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"DevOps","gitbook":"*","description":"Anotações sobre DevOps"},"file":{"path":"content/entrega-continua.md","mtime":"2017-04-23T19:49:09.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-04-24T01:47:24.346Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Entrega contínua","level":"1.2.2","depth":2,"next":{"title":"Integração contínua","level":"1.2.3","depth":2,"path":"content/integracao-continua.md","ref":"content/integracao-continua.md","articles":[]},"previous":{"title":"Geral","level":"1.2.1","depth":2,"path":"content/overview.md","ref":"content/overview.md","articles":[]},"dir":"ltr"},"config":{"plugins":["theme-api","prism","-highlight","hints","expandable-chapters"],"styles":{"website":"./assets/main.css"},"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-tomorrow.css"]},"search":{},"hints":{"danger":"fa fa-exclamation-circle","info":"fa fa-info-circle","tip":"fa fa-mortar-board","working":"fa fa-wrench"},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-api":{"languages":[],"split":true,"theme":"dark"},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{}},"theme":"default","author":"Gabriel Godoy","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"DevOps","gitbook":"*","description":"Anotações sobre DevOps"},"file":{"path":"content/entrega-continua.md","mtime":"2017-04-24T02:14:11.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-04-24T02:14:17.848Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

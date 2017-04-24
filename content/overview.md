@@ -2,8 +2,9 @@
 
 O termo DevOps é a combinação das palavras `desenvolvimento` e `operações`.
 
-Seu objetivo é remover as ineficiências encontradas ao longo do processo de desenvolvimento, implantação e operações.
+> O DevOps é uma cultura que tem como foco a **melhoria nos processos de desenvolvimento, até a entrega do produto, assim como a melhor integração entre as partes envolvidas**.
 
+Para tornar o processo mais eficiente, as práticas de DevOps procuram remover as ineficiências encontradas ao longo do processo de desenvolvimento, implantação e operações.
 
 ## Três pilares do DevOps
 
