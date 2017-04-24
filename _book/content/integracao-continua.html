@@ -1,0 +1,353 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Integração contínua · DevOps</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.2">
+        <meta name="author" content="Gabriel Godoy">
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-prism/prism-tomorrow.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-hints/plugin-hints.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-theme-api/theme-api.css">
+                
+            
+        
+
+    
+
+    
+        
+        <link rel="stylesheet" href="../assets/main.css">
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="fontes.html" />
+    
+    
+    <link rel="prev" href="entrega-continua.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introdução
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" >
+            
+                <span>
+            
+                    
+                    DevOps
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="overview.html">
+            
+                <a href="overview.html">
+            
+                    
+                    Geral
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="entrega-continua.html">
+            
+                <a href="entrega-continua.html">
+            
+                    
+                    Entrega contínua
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.2.3" data-path="integracao-continua.html">
+            
+                <a href="integracao-continua.html">
+            
+                    
+                    Integração contínua
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="fontes.html">
+            
+                <a href="fontes.html">
+            
+                    
+                    Fontes
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >Integração contínua</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="continuous-integration-integra&#xE7;&#xE3;o-cont&#xED;nua">Continuous integration (Integra&#xE7;&#xE3;o cont&#xED;nua)</h1>
+<p>A CI ajuda com os objetivos de efici&#xEA;ncia em nosso desenvolvimento, implanta&#xE7;&#xE3;o, pipeline operacional e o objetivo de um software de qualidade.</p>
+<p>O CI &#xE9; um processo onde os desenvolvedores confirmam seu c&#xF3;digo ao longo do dia para um reposit&#xF3;rio compartilhado e cada commit &#xE9; automaticamente constru&#xED;do e testado, e os resultados s&#xE3;o enviados aos desenvolvedores. Ao criar e testar automaticamente cada commit, voc&#xEA; pode identificar erros imediatamente.</p>
+<p>Segue algumas etapas de um bom CI</p>
+<ul>
+<li>Ambientes espelhados</li>
+<li>Versionamento</li>
+<li>Hooks/Linters</li>
+<li>Migrations</li>
+<li>Testes</li>
+<li>Build</li>
+</ul>
+<h2 id="ambientes-espelhados">Ambientes espelhados</h2>
+<p>O objetivo &#xE9; deixar o seu ambiente de desenvolvimento mais pr&#xF3;ximo do ambiente de produ&#xE7;&#xE3;o, assim evitamos o velho problema &#x201C;Mas na minha maquina esta funcionando&#x201D;</p>
+<p><a href="https://www.docker.com/" target="_blank">Docker</a> ou Virtualiza&#xE7;&#xE3;o s&#xE3;o boas ferramentas para este fim</p>
+<h2 id="versionamento">Versionamento</h2>
+<p>Algumas dicas para um bom uso de versionamento</p>
+<ul>
+<li>commits de pequenas mudan&#xE7;as</li>
+<li>usar um plugin ou conven&#xE7;&#xE3;o para ajudar a organizar melhor o hist&#xF3;rico do reposit&#xF3;rio, git flow &#xE9; um bom exemplo disso</li>
+<li>Hooks de pre e p&#xF3;s commit rodando teste e requisitos necess&#xE1;rios</li>
+<li><a href="http://semver.org/lang/pt-BR/#versionamento-semntico-200" target="_blank">Versionamento Sem&#xE2;ntico</a></li>
+</ul>
+<h2 id="git-hooks">Git Hooks</h2>
+<p>Hooks do Git s&#xE3;o &#xFA;teis para rodar scripts de <code>pre-commit</code> e <code>pre-push</code> a fim de verificar a qualidade do c&#xF3;digo escrito. </p>
+<h2 id="linters-de-c&#xF3;digo">Linters de c&#xF3;digo</h2>
+<p>Linters como <a href="http://eslint.org/" target="_blank">eslint</a> <a href="https://github.com/stylelint/stylelint" target="_blank">stylelint</a> <a href="https://pypi.python.org/pypi/pycodestyle" target="_blank">pycodestyle</a> definem padr&#xF5;es que todo desenvolvedor deve seguir ao escrever seu c&#xF3;gigo. Dessa forma &#xE9; poss&#xED;ve lter um c&#xF3;digo uniforme entre todos os membros da equipe, facilitando a leitura do mesmo.</p>
+<h2 id="migrations">Migrations</h2>
+<p>Temos de ter todo um cuidado especial aqui uma boa dica &#xE9; ler toda a documenta&#xE7;&#xE3;o <a href="https://docs.djangoproject.com/en/1.9/topics/migrations/" target="_blank">django migrations</a></p>
+<h2 id="testes">Testes</h2>
+<h3 id="testes-de-unidade">Testes de unidade:</h3>
+<blockquote>
+<p>Pr&#xE1;ticas como TDD e refatora&#xE7;&#xE3;o d&#xE3;o bastante &#xEA;nfase nesse tipo de teste, que exercita unidades de c&#xF3;digo isoladamente sem a necessidade de subir e aplica&#xE7;&#xE3;o inteira. Esses testes geralmente rodam bem r&#xE1;pido &#x2013; na ordem de milissegundos &#x2013; podendo ser executados com bastante frequ&#xEA;ncia e fornecendo o melhor tipo de feedback para os desenvolvedores.</p>
+</blockquote>
+<h3 id="testes-de-integra&#xE7;&#xE3;o-ou-testes-de-componente">Testes de integra&#xE7;&#xE3;o ou testes de componente:</h3>
+<blockquote>
+<p>Exercitam uma parte da aplica&#xE7;&#xE3;o ou como ela se integra com suas depend&#xEA;ncias, por exemplo: um banco de dados, um servi&#xE7;o REST, uma fila de mensagens, ou at&#xE9; mesmo os frameworks e bibliotecas utilizados. Dependendo do componente que est&#xE1; sendo testado, a execu&#xE7;&#xE3;o desses testes podem exigir que partes do sistema estejam rodando.</p>
+</blockquote>
+<h3 id="testes-funcionais-ou-testes-de-aceita&#xE7;&#xE3;o">Testes funcionais ou testes de aceita&#xE7;&#xE3;o:</h3>
+<blockquote>
+<p>Exercitam as funcionalidades do sistema como um todo, do ponto de vista externo. Geralmente este tipo de teste exercita a interface gr&#xE1;fica ou simula a intera&#xE7;&#xE3;o com o sistema do ponto de vista de um usu&#xE1;rio. Esses testes geralmente s&#xE3;o mais lentos pois exigem que a maior parte do sistema esteja rodando.</p>
+</blockquote>
+<h2 id="build">Build</h2>
+<p>O processo de Build &#xE9; prepara o c&#xF3;digo para ser entregue em qualquer ambiente seja ele Produ&#xE7;&#xE3;o, Teste, homologa&#xE7;&#xE3;o ou qualquer outro ambiente.</p>
+<p>Este processo se beneficia muito da automa&#xE7;&#xE3;o um dos fundamentos da cultura DevOps</p>
+<p>Algumas ferramentas para automatizar este processos:</p>
+<ul>
+<li><a href="https://jenkins.io/" target="_blank">Jenkins</a></li>
+<li><a href="https://travis-ci.org/" target="_blank">Travis CI</a></li>
+<li><a href="https://www.jetbrains.com/teamcity/" target="_blank">TeamCity</a></li>
+</ul>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Integração contínua","level":"1.2.3","depth":2,"next":{"title":"Fontes","level":"1.2.4","depth":2,"path":"content/fontes.md","ref":"content/fontes.md","articles":[]},"previous":{"title":"Entrega contínua","level":"1.2.2","depth":2,"path":"content/entrega-continua.md","ref":"content/entrega-continua.md","articles":[]},"dir":"ltr"},"config":{"plugins":["theme-api","prism","-highlight","hints","expandable-chapters"],"styles":{"website":"./assets/main.css"},"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-tomorrow.css"]},"search":{},"hints":{"danger":"fa fa-exclamation-circle","info":"fa fa-info-circle","tip":"fa fa-mortar-board","working":"fa fa-wrench"},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-api":{"languages":[],"split":true,"theme":"dark"},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{}},"theme":"default","author":"Gabriel Godoy","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"DevOps","gitbook":"*","description":"Anotações sobre DevOps"},"file":{"path":"content/integracao-continua.md","mtime":"2017-04-23T19:12:33.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-04-24T01:47:24.346Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-theme-api/theme-api.js"></script>
+        
+    
+
+    </body>
+</html>
+

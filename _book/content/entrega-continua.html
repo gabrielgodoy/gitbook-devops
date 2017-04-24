@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>Geral · DevOps</title>
+        <title>Entrega contínua · DevOps</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.2">
@@ -61,8 +61,10 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="entrega-continua.html" />
+    <link rel="next" href="integracao-continua.html" />
     
+    
+    <link rel="prev" href="overview.html" />
     
 
     </head>
@@ -118,7 +120,7 @@
             <ul class="articles">
                 
     
-        <li class="chapter active" data-level="1.2.1" data-path="overview.html">
+        <li class="chapter " data-level="1.2.1" data-path="overview.html">
             
                 <a href="overview.html">
             
@@ -131,7 +133,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2.2" data-path="entrega-continua.html">
+        <li class="chapter active" data-level="1.2.2" data-path="entrega-continua.html">
             
                 <a href="entrega-continua.html">
             
@@ -205,7 +207,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >Geral</a>
+        <a href=".." >Entrega contínua</a>
     </h1>
 </div>
 
@@ -220,22 +222,24 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="devops">DevOps</h1>
-<p>O termo DevOps &#xE9; a combina&#xE7;&#xE3;o das palavras <code>desenvolvimento</code> e <code>opera&#xE7;&#xF5;es</code>.</p>
-<p>Seu objetivo &#xE9; remover as inefici&#xEA;ncias encontradas ao longo do processo de desenvolvimento, implanta&#xE7;&#xE3;o e opera&#xE7;&#xF5;es.</p>
-<h2 id="tr&#xEA;s-pilares-do-devops">Tr&#xEA;s pilares do DevOps</h2>
+                                <h1 id="continuous-delivery-entrega-cont&#xED;nua">Continuous delivery (Entrega cont&#xED;nua)</h1>
+<p>Com o processo de desenvolvimento mais &#xE1;gil, &#xE9; poss&#xED;vel entregar melhorias ao usu&#xE1;rio final, e responder a demandas de mercado muito mais r&#xE1;pido.</p>
+<p>O cen&#xE1;rio ideal seria apertar um bot&#xE3;o e entregar seu c&#xF3;digo onde quiser (Ambiente de homologa&#xE7;&#xE3;o, teste ou produ&#xE7;&#xE3;o).</p>
+<p>A entrega cont&#xED;nua deve come&#xE7;ar pela implanta&#xE7;&#xE3;o (deploy) do software em um ambiente de teste que espelhe a produ&#xE7;&#xE3;o.</p>
+<p>O desenvolvedor ap&#xF3;s desenvolver uma nova funcionalidade ou produto dever&#xE1; subir esse novo c&#xF3;digo para o ambiente de testes. Dever&#xE1; ent&#xE3;o ser executados os testes de aceita&#xE7;&#xE3;o automatizados ou testes de regress&#xE3;o para garantir que nenhuma nova mudan&#xE7;a de c&#xF3;digo quebrou as funcionalidades existentes. Casos os estes teste falhem o processo deve parar. O desenvolvedor deve ser notificado automaticamente. Caso os testes de aceita&#xE7;&#xE3;o passem, todos os testes n&#xE3;o-funcionais automatizados devem ser executados.</p>
+<p>Testes de Carga e de seguran&#xE7;a pode sem executados nessa etapa tamb&#xE9;m.</p>
+<p>Caso a bateria de testes n&#xE3;o detecte nenhum problema, o novo c&#xF3;digo estar&#xE1; pronto para ser incoporado ao ambiente de produ&#xE7;&#xE3;o.</p>
+<h2 id="m&#xE9;todos-de-implanta&#xE7;&#xE3;o-deploy">M&#xE9;todos de implanta&#xE7;&#xE3;o (deploy)</h2>
+<h3 id="entrega-azul--verde">Entrega azul / verde</h3>
+<p>As cores Azul e Verde s&#xE3;o apenas marcadores de posi&#xE7;&#xE3;o para representar um grupo de servidores. A estrat&#xE9;gia azul/verde ajuda a subir uma nova atualiza&#xE7;&#xE3;o, minimizando o tempo de inatividade. Voc&#xEA; tem dois ambientes, chamados verde e azul. E voc&#xEA; tem um roteador para escolher qual est&#xE1; online.</p>
+<h3 id="servidor-can&#xE1;rio">Servidor Can&#xE1;rio</h3>
+<p>Um Servidor Can&#xE1;rio funciona como um can&#xE1;rio das minas de Carv&#xE3;o, &#xE9; um servidor onde colocamos uma certa porcentagem do trafego apenas para verificar seu comportamento e verificar se o novo release sobrevive.</p>
+<p>Ferramentas para ajudar neste processo:</p>
 <ul>
-<li>Cultura</li>
-<li>Automa&#xE7;&#xE3;o</li>
-<li>M&#xE9;tricas</li>
+<li><a href="https://www.ansible.com/" target="_blank">Ansible</a></li>
+<li><a href="https://www.chef.io/" target="_blank">Chef</a></li>
+<li><a href="https://puppet.com/" target="_blank">Puppet</a></li>
 </ul>
-<h3 id="cultura">Cultura</h3>
-<p>A cultura DevOps tem diversos princ&#xED;pios, como a melhoria cont&#xED;nua, o foco em qualidade, a elimina&#xE7;&#xE3;o de desperd&#xED;cios, a otimiza&#xE7;&#xE3;o do todo.</p>
-<h3 id="automa&#xE7;&#xE3;o">Automa&#xE7;&#xE3;o</h3>
-<p>Automatize tudo que for poss&#xED;vel para evitar falha humana em processo repetitivos e tediosos.</p>
-<h3 id="m&#xE9;tricas">M&#xE9;tricas</h3>
-<p>Uma ado&#xE7;&#xE3;o de DevOps de sucesso ir&#xE1; medir tudo o que for poss&#xED;vel, por exemplo: m&#xE9;tricas de desempenho, m&#xE9;tricas de processo, m&#xE9;tricas de neg&#xF3;cio, avalia&#xE7;&#xE3;o do usu&#xE1;rio final etc.</p>
-<p>Precisamos saber o que medir para determinar se o nosso pipeline est&#xE1; se tornando mais eficiente e se estamos produzindo com qualidade.</p>
 
                                 
                                 </section>
@@ -269,7 +273,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Geral","level":"1.2.1","depth":2,"next":{"title":"Entrega contínua","level":"1.2.2","depth":2,"path":"content/entrega-continua.md","ref":"content/entrega-continua.md","articles":[]},"previous":{"title":"DevOps","level":"1.2","depth":1,"ref":"","articles":[{"title":"Geral","level":"1.2.1","depth":2,"path":"content/overview.md","ref":"content/overview.md","articles":[]},{"title":"Entrega contínua","level":"1.2.2","depth":2,"path":"content/entrega-continua.md","ref":"content/entrega-continua.md","articles":[]},{"title":"Integração contínua","level":"1.2.3","depth":2,"path":"content/integracao-continua.md","ref":"content/integracao-continua.md","articles":[]},{"title":"Fontes","level":"1.2.4","depth":2,"path":"content/fontes.md","ref":"content/fontes.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["theme-api","prism","-highlight","hints","expandable-chapters"],"styles":{"website":"./assets/main.css"},"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-tomorrow.css"]},"search":{},"hints":{"danger":"fa fa-exclamation-circle","info":"fa fa-info-circle","tip":"fa fa-mortar-board","working":"fa fa-wrench"},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-api":{"languages":[],"split":true,"theme":"dark"},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{}},"theme":"default","author":"Gabriel Godoy","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"DevOps","gitbook":"*","description":"Anotações sobre DevOps"},"file":{"path":"content/overview.md","mtime":"2017-04-24T01:46:31.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-04-24T01:47:24.346Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Entrega contínua","level":"1.2.2","depth":2,"next":{"title":"Integração contínua","level":"1.2.3","depth":2,"path":"content/integracao-continua.md","ref":"content/integracao-continua.md","articles":[]},"previous":{"title":"Geral","level":"1.2.1","depth":2,"path":"content/overview.md","ref":"content/overview.md","articles":[]},"dir":"ltr"},"config":{"plugins":["theme-api","prism","-highlight","hints","expandable-chapters"],"styles":{"website":"./assets/main.css"},"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-tomorrow.css"]},"search":{},"hints":{"danger":"fa fa-exclamation-circle","info":"fa fa-info-circle","tip":"fa fa-mortar-board","working":"fa fa-wrench"},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-api":{"languages":[],"split":true,"theme":"dark"},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{}},"theme":"default","author":"Gabriel Godoy","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"DevOps","gitbook":"*","description":"Anotações sobre DevOps"},"file":{"path":"content/entrega-continua.md","mtime":"2017-04-23T19:49:09.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-04-24T01:47:24.346Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
