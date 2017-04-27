@@ -1,8 +1,6 @@
-**Content in PORTUGUESE**
-
 [Conteúdo escrito inicialmente por Ricardo Periago](https://rperiago.github.io/DevOps/)
 
-[Link para o gitbook](https://gabrielgodoy.gitbooks.io/devops/content/)
+[Link para o gitbook](https://globoesporte.gitbooks.io/devops/content/)
 
 ## Anotações sobre DevOps
 Essa documentação tem como objetivo entender melhor o conceito de DevOps e suas melhores práticas.
